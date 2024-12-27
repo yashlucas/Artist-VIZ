@@ -14,7 +14,7 @@ This project is designed for **researchers**, **curators**, and **art historians
 
 ## Dashboard Access
 Explore the interactive visualization dashboard usinf the link below.
-## [here](https://yashlucas.github.io/Artist-Viz/). 
+## [Click here](https://yashlucas.github.io/Artist-Viz/). 
 
 ## Repository Contents
 - Dataset of artists and exhibitions
