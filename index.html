@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Birth and Death Year Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style\style.css">
+</head>
+<body>
+    <h1 class="chart-title">Biographical Data of Artists</h1>
+    <div id="chart"></div>
+    <div class="tooltip" id="tooltip"></div>
+
+    <div class="country-filter">
+        <label for="country-select">Select Nationality:</label>
+
+        <select id="country-select">
+            <option value="">All Nationality</option>
+            <option value="GB">GB</option>
+            <option value="NL">NL</option>
+            <option value="RU">RU</option>
+            <option value="CH">CH</option>
+            <option value="US">US</option>
+            <option value="FR">FR</option>
+            <option value="IT">IT</option>
+            <option value="DE">DE</option>
+            <option value="CZ">CZ</option>
+            <option value="HU">HU</option>
+            <option value="UA">UA</option>
+            <option value="RO">RO</option>
+            <option value="AU">AU</option>
+            <option value="BE">BE</option>
+            <option value="BY">BY</option>
+            <option value="AT">AT</option>
+            <option value="NO">NO</option>
+            <option value="SE">SE</option>
+            <option value="FI">FI</option>
+            <option value="ES">ES</option>
+            <option value="PL">PL</option>
+            <option value="BG">BG</option>
+            <option value="GE">GE</option>
+            <option value="MX">MX</option>
+            <option value="AM">AM</option>
+            <option value="IL">IL</option>
+            <option value="PT">PT</option>
+            <option value="DK">DK</option>
+            <option value="IE">IE</option>
+            <option value="HR">HR</option>
+            <option value="CL">CL</option>
+            <option value="SK">SK</option>
+            <option value="GR">GR</option>
+            <option value="LT">LT</option>
+            <option value="LV">LV</option>
+            <option value="CA">CA</option>
+            <option value="RS">RS</option>
+            <option value="TR">TR</option>
+            <option value="SI">SI</option>
+            <option value="EE">EE</option>
+            <option value="AR">AR</option>
+            <option value="ZA">ZA</option>
+            <option value="LU">LU</option>
+            <option value="NZ">NZ</option>
+            <option value="VE">VE</option>
+            <option value="GT">GT</option>
+            <option value="UY">UY</option>
+            <option value="SV">SV</option>
+            <option value="JP">JP</option>
+            <option value="BA">BA</option>
+            <option value="IN">IN</option>
+            <option value="ME">ME</option>
+            <!-- Add all the other countries here... -->
+        </select>
+    </div>
+    
+
+        <script src="script\script.js"></script>
+
+    <div class="gender-box">
+        <div class="gender-section" id="birth-gender">
+            <h2>Total number of Births</h2>
+            <div class="gender-grid">
+                <div class="gender-box-item" id="birth-year">Year: 1810</div>
+                <div class="gender-box-item" id="birth-total">Total: 0</div>
+                <div class="gender-box-item" id="birth-male">Male: 0</div>
+                <div class="gender-box-item" id="birth-female">Female: 0</div>
+            </div>
+        </div>
+        <div class="gender-section" id="death-gender">
+            <h2>Total number of Deaths</h2>
+            <div class="gender-grid">
+                <div class="gender-box-item" id="death-year">Year: 2000</div>
+                <div class="gender-box-item" id="death-total">Total: 0</div>
+                <div class="gender-box-item" id="death-male">Male: 0</div>
+                <div class="gender-box-item" id="death-female">Female: 0</div>
+            </div>
+
+        </div>
+        <label class="small-label">
+            * The total count of births does not depend on the year selected for deaths and vice versa
+        </label>
+    </div>
+    <div id="info-table">
+        <h3>Name of Artiest and There Details</h3>
+        <table class="scrolldown">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Nationality</th>
+                    <th>Year of Birth</th>
+                    <th>Year of Death</th>
+                    <th>Place of Birth</th>
+                    <th>Place of Death</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <button class="next-page-button" onclick="window.location.href='o_html_pages/index1.html'">
+        Discover Detailed Events by Various Authors
+    </button>
+    
+    
+</body>
+</html>

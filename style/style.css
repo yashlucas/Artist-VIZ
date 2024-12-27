@@ -1,0 +1,225 @@
+
+/* CSS Styles for Chart */
+
+.chart-title {
+    text-align: center;
+    font-size: 44px;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #333;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    display: none;
+    pointer-events: none;
+    z-index: 10;
+}
+.gender-box {
+width: 25%; /* Takes up a quarter of the width */
+height:30%;
+margin: 20px 0;
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #fff;
+border-left: 2px solid #ddd;
+position: fixed; /* Fixed position to stay on the right */
+right: 20px; /* Places it 20px from the right edge */
+top: 100px;
+z-index: 10; /* Keeps it above other content */
+}
+.gender-section {
+    margin: 10px 0;
+    text-align: center;
+}
+.gender-section h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.gender-grid {
+    display: flex;
+    gap: 10px;
+}
+.gender-box-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#info-table {
+width: 100%;
+margin: 40px 10% auto; /* Add 10% right margin */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+#info-table h3 {
+text-align: Right; 
+margin-bottom: 10px;
+color: #333;
+margin-right: 1430px; /* Add 10px left margin */
+}
+table.scrolldown {
+width: 60%; 
+border-spacing: 0;
+border: 2px solid black;
+}
+
+/* To display the block as level element */
+table.scrolldown tbody,
+table.scrolldown thead {
+display: block;
+}
+
+thead tr th,tbody td,
+thead th {
+height: 40px;
+line-height: 40px;
+padding: 0 0px; 
+text-align: left;
+width: 200px;
+}
+
+table.scrolldown tbody {
+height: 150px; /* Adjust this height as needed */
+overflow-y: auto;
+
+}
+
+tbody tr {
+height: 40px; 
+line-height: 40px;
+margin-bottom: 5px; /* Add space between rows */
+}
+
+tbody {
+border-top: 2px solid black;
+}
+
+
+/* Styles for the nationality dropdown */
+#nationality-filter select {
+padding: 8px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+appearance: none; /* Remove default dropdown arrow */
+-webkit-appearance: none; /* For Safari */
+-moz-appearance: none; /* For Firefox */
+background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); /* Custom arrow */
+background-repeat: no-repeat;
+background-position: right 10px center;
+background-size: 1em;
+padding-right: 30px; /* Adjust padding for arrow space */
+}
+
+#nationality-filter select:focus {
+outline: none;
+border-color: #66afe9;
+box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}.country-filter {
+margin-bottom: 20px; /* Add some space below the filter */
+display: flex; /* Use flexbox for layout */
+align-items: center; /* Vertically align label and select */
+}
+
+.country-filter label {
+margin-right: 10px; /* Space between label and select */
+font-weight: bold; /* Make the label bold */
+font-size: 35px;
+}
+
+.country-filter select {
+padding: 8px; /* Add some padding inside the select */
+border: 1px solid #ccc; /* Add a border */
+border-radius: 4px; /* Rounded corners */
+font-size: 30px; /* Set a font size */
+appearance: none; /* Remove default styling on some browsers */
+-webkit-appearance: none;
+-moz-appearance: none;
+background-color: white; /* Set background color */
+background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); /* Add a dropdown arrow */
+background-repeat: no-repeat;
+background-position: right 8px center;
+background-size: 1em;
+padding-right: 30px; /* Make space for the dropdown arrow */
+cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.country-filter select:focus {
+outline: none; /* Remove default focus outline */
+border-color: #007bff; /* Change border color on focus */
+box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a focus box-shadow */
+}
+
+/* Optional: Style the dropdown options */
+.country-filter select option {
+padding: 4px 8px;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+position: relative;
+min-height: 100vh; /* Ensures body takes at least full viewport height */
+overflow: hidden; /* Prevents scrollbars */
+}
+
+body::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('../images/image6.jpg'); /* Correct path! */
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 0.2; /* Adjust transparency */
+z-index: -1; /* Ensures background stays behind content */
+}
+
+.small-label {
+font-size: 0.8rem; /* Adjust font size */
+color: gray; /* Optional: Set color for better readability */
+font-style: italic; /* Optional: Add emphasis */
+margin-top: 10px; /* Add spacing from above content */
+display: block; /* Ensure it appears on a new line */
+}
+.next-page-button {
+position: fixed; /* Fix button at the bottom-right corner */
+bottom: 30px; /* Distance from the bottom */
+right: 30px; /* Distance from the right */
+background-color: #4CAF50; /* Green background */
+color: white; /* White text */
+border: none; /* Remove borders */
+border-radius: 5px; /* Rounded corners */
+padding: 20px 50px; /* Padding for button size */
+font-size: 1rem; /* Font size */
+cursor: pointer; /* Pointer cursor on hover */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for aesthetics */
+transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.next-page-button:hover {
+background-color: #45a049; /* Slightly darker green on hover */
+transform: scale(1.05); /* Slightly enlarge button on hover */
+}

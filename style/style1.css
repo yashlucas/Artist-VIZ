@@ -1,0 +1,256 @@
+
+    #map {
+
+      height: 55vh; /* Map height */
+      width: 90vh;
+      left:30px;
+      top:10px;
+    }
+    #timeline-container {
+      padding: 30px;
+      margin: 10px 0;
+      text-align: center;
+
+    }
+    #timeline-slider {
+      margin: 10px;
+      width: 90vh;
+      top:70px;
+    }
+    #filter-container {
+      margin: 10px 0;
+    }
+    #top-painters-container {
+      position: fixed; /* Fixed position to stay on the right */
+      right: 25%; /* Places it 25% from the right edge */
+      top: 200px;
+      z-index: 10;
+ /* Adds 10px of space around all sides of the element */
+  /* Adds spacing to the right */
+margin-bottom: 50px; /* Adds spacing below */
+   /* Adds spacing to the left */
+
+      padding: 20px;
+      border: 1px solid #ddd;
+      width: 350px;
+      height: vh;
+      background-color: #ffffff; /* Add background color for better visibility */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      border-radius: 5px;
+
+    }
+
+    #total-events-container {
+  margin-top: 10px;
+  padding: 10px;             /* Add padding inside the box */
+  border: 2px solid #ddd;    /* Add a light border around the box */
+  background-color: #f9f9f9; /* Add a background color to the box */
+  border-radius: 5px;        /* Optional: Add rounded corners to the box */
+  width:200px;         /* Adjust width to content inside */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  position: fixed; /* Fixed position to stay on the right */
+    right: 10%; /* Places it 20px from the right edge */
+    top: 350px; 
+}
+    
+#city-name {
+  margin-top: 10px;
+  padding: 10px;             /* Add padding inside the box */
+  border: 2px solid #ddd;    /* Add a light border around the box */
+  background-color: #f9f9f9; /* Add a background color to the box */
+  border-radius: 5px;        /* Optional: Add rounded corners to the box */
+  width:200px;         /* Adjust width to content inside */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  position: fixed; /* Fixed position to stay on the right */
+    right: 10%; /* Places it 20px from the right edge */
+    top: 200px; 
+}
+#event-counts-group {
+  margin-top: 10px;
+  padding: 10px;             /* Add padding inside the box */
+  border: 2px solid #ddd;    /* Add a light border around the box */
+  background-color: #f9f9f9; /* Add a background color to the box */
+  border-radius: 5px;        /* Optional: Add rounded corners to the box */
+  width:200px;        /* Adjust width to content inside */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  position: fixed; /* Fixed position to stay on the right */
+    right: 10%; /* Places it 20px from the right edge */
+    top: 500px; 
+}
+#event-counts-solo {
+  margin-top: 10px;
+  padding: 10px;             /* Add padding inside the box */
+  border: 2px solid #ddd;    /* Add a light border around the box */
+  background-color: #f9f9f9; /* Add a background color to the box */
+  border-radius: 5px;        /* Optional: Add rounded corners to the box */
+  width:200px;         /* Adjust width to content inside */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  position: fixed; /* Fixed position to stay on the right */
+    right: 10%; /* Places it 20px from the right edge */
+    top: 650px; 
+}
+#top-painters-container button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#top-painters-container button:hover {
+  background-color: #45a049;
+}
+
+#top-painters-container button[selected] {
+  background-color: #3e8e41; /* Highlight selected button */
+}
+
+
+
+    #selected-year-range {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    /* New Style for Pie Chart */
+    #pie-chart {
+
+      width: 450px;
+      height: 450px;
+
+      margin-top: 60px;
+    }
+     /* Basic styling for the tab bar */
+     .tabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px;
+ font-size: 16px;
+
+}    body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+position: relative;
+min-height: 100vh; /* Ensures body takes at least full viewport height */
+overflow: hidden; /* Prevents scrollbars */
+}
+
+body::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('../images/image4.jpg'); /* Correct path! */
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 0.2; /* Adjust transparency */
+z-index: -1; /* Ensures background stays behind content */
+}
+
+
+/* Common styles for both containers */
+.dropdown-container, #filter-container {
+  position: relative;
+  z-index: 2000;
+  top: 10px; /* Adjust as needed to position both containers equally */
+  display: inline-block;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+#filter-container label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px; /* Adds space between the label and the dropdown */
+}
+
+/* Dropdown Trigger */
+.dropdown-trigger, #type-filter {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  border-radius: 4px;
+  z-index: 2050;
+}
+
+/* Dropdown menu items */
+.dropdown-menu-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu-item:hover, #type-filter:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* Tab Styles */
+.tab {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.tab.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Hide Load File Button */
+#loadFileButton {
+  display: none;
+}
+
+#total-events-container, #event-counts-solo, #event-counts-group, #city,#city-name {
+    text-align: center; /* Center align text */
+    margin: 20px 0; /* Add spacing between sections */
+  }
+
+  #total-events-container span, 
+  #event-counts-solo span, 
+  #event-counts-group span,
+  #city-name span {
+    display: block; /* Ensure the numbers appear below the heading */
+    font-size: 2.5rem; /* Increase the font size for prominence */
+    font-weight: bold; /* Make the numbers bold */
+    color: #000; /* Ensure numbers have a strong black color */
+  }
+
+  h3 {
+    margin-bottom: 10px; /* Add space below headings */
+    font-size: 1.2rem; /* Slightly smaller font size for headings */
+    color: #555; /* Subtle grey for headings */
+  }
+
+

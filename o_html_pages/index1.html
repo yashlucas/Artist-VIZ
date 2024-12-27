@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map with Timeline</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+  <!-- noUiSlider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+  <!-- Chart.js CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../style/style1.css">
+</head>
+<body>
+  <h1>Exploring 19th-Century U.S. Artists: Visionaries Shaping Creativity</h1>
+  <div class="tabs" id="tabs">
+    <div class="nav-container">
+      <!-- Dropdown menu -->
+      <div class="dropdown-container">
+        <button class="dropdown-trigger">Choose a City</button>
+        <div class="dropdown-content">
+          <div class="dropdown-menu-item">
+            <a class="tab active" href="#" data-file="../csv/event_details_Pittsburgh.csv" data-min="1905" data-max="1914">Pittsburgh</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_New_York.csv" data-min="1908" data-max="1915">New York</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_Chicago.csv" data-min="1905" data-max="1913">Chicago</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_Boston.csv" data-min="1913" data-max="1913">Boston</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_Cincinnati.csv" data-min="1905" data-max="1905">Cincinnati</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_Dresden.csv" data-min="1906" data-max="1914">Dresden</a>
+          </div>
+          <div class="dropdown-menu-item">
+            <a class="tab" href="#" data-file="../csv/event_details_San_Francisco.csv" data-min="1915" data-max="1915">San Francisco</a>
+          </div>
+        </div>
+      </div>
+
+
+
+  
+  
+  
+<!-- Button to load the selected country's file -->
+<button id="loadFileButton" style="display: none;"></button>
+
+
+
+  <div id="filter-container">
+    <label for="type-filter"></label>
+    <select id="type-filter">
+      <option disabled selected>Choose Event Type</option>
+      <option value="all" >All</option>
+      <option value="solo">Solo</option>
+      <option value="group">Group</option>
+    </select>
+  </div>
+</div>
+</div>
+  <div id="map"></div>
+  <div id="timeline-container">
+    <div id="timeline-slider"></div>
+  </div>
+  <!-- Display Selected Year Range -->
+  <div id="selected-year-range"></div>
+
+
+  <svg id="timeline" width="600" height="50"></svg>
+
+  <div id="city-name">
+    <h3>Name of the City</h3>
+    <span id="City">N/A </span>
+  </div>
+  <div id="total-events-container">
+    <h3>Total Events:</h3>
+    <span id="total-events">0</span>
+  </div>
+  
+  <div id="event-counts-solo">
+    <h3>Solo Events:</h3>
+    <span id="solo-count">0</span>
+  </div>
+  
+  <div id="event-counts-group">
+    <h3>Group Events:</h3>
+    <span id="group-count">0</span>
+  </div>
+  
+  
+
+  <!-- Dropdown for selecting top N painters -->
+  <div id="top-painters-container">
+    <h3>Frequent Artists:</h3>
+    <p>This is based on the number of time artist who participated in the events. </p>
+    <button class="top-painter-button" data-top="2">Top 2</button>
+    <button class="top-painter-button" data-top="5">Top 5</button>
+    <button class="top-painter-button" data-top="10" selected>Top 10</button>
+    <canvas id="pie-chart"></canvas>
+  </div>
+  
+
+  
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <!-- noUiSlider JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <script src="../script/script1.js"></script>
+</body>
+</html>
