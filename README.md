@@ -24,4 +24,4 @@ Explore the interactive visualization dashboard usinf the link below.
 ## Contact
 For feedback or contributions, feel free to submit an issue or pull request.
 
-Created by Yash Lucas (yashlucas02@gmail.com), Anukriti Sharma (sharmaanukriti2411@gmail.com)  on December 27 2024
+Created by Yash Lucas (yashlucas02@gmail.com), Anukriti Sharma (sharmaanukriti2411@gmail.com), Akash Slamat  on December 27 2024
